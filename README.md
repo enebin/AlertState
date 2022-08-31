@@ -13,6 +13,38 @@ Abstract your `Alert`s and manage them in one place.
 ### Swift Package Manager
 
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+## Usage
+```
+import SwiftUI
+import AlertState
+
+enum AlertTypes {
+    case errorAlert
+    case curogo
+}
+
+extension AlertTypes: Identifiable {
+    var id: Self { self }
+}
+
+extension AlertTypes: AlertType {
+    var alertButtons: [AlertButton] {
+        return [
+            AlertButton("label", action: { print("wow") }),
+            AlertButton("label", action: {})
+        ]
+    }
+    
+    var title: String {
+        return "Test"
+    }
+    
+    var message: String? {
+        return "Test"
+    }
+}
+
+
+```
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->

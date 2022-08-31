@@ -37,8 +37,8 @@ extension AlertType {
 }
 
 
+@available(iOS 15.0, *)
 extension AlertType {
-    @available(iOS 15.0, *)
     @ViewBuilder func alertContent(dismissAction: @escaping () -> Void) -> some View {
         /// The case both buttons are given
         if self.alertButtons.isEmpty {
