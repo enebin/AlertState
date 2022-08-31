@@ -9,7 +9,7 @@ import SwiftUI
 
 /// It adopts `Identifiable` for iOS 13's nil - non nil changing
 /// `Equatable` for iOS 15 for `onChange`
-public protocol AlertType: Identifiable, Equatable {
+public protocol AlertType {
     var title: String { get }
     
     var message: String? { get }

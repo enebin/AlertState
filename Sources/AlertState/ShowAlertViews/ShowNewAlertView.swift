@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-struct ShowNewAlertView<V, AlertT>: View where V: View, AlertT: AlertType {
+struct ShowNewAlertView<V, AlertT>: View where V: View, AlertT: AlertType & Equatable {
     private let content: V
     @Binding private var alertType: AlertT?
     @State private var isPresented : Bool = false
