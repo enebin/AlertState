@@ -1,6 +1,5 @@
-# ``AlertState``
-
-Abstract your `Alert`s and manage them in one place. 
+# AlertState
+Manage `Alert`s in one place! 
 
 ## Overview
 
@@ -8,6 +7,8 @@ Abstract your `Alert`s and manage them in one place.
 
 ## Features
 - Super easy to use
+- You only need 2 lines to show alert in `View`s.  No needs for extra variables anymore!
+- Abstract your alert windows with `enum`. It helps you managing the alert windows with more organized way.
 
 ## How to install
 ### Swift Package Manager
