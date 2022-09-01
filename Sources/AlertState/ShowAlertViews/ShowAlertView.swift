@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShowAlertView<V, AlertT>: View where V: View, AlertT: AlertType & Identifiable {
+struct ShowAlertView<V, AlertT>: View where V: View, AlertT: SimpleAlertType & Identifiable {
     private let content: V
     /// Get alert type
     @Binding private var alertType: AlertT?

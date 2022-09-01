@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-extension AlertType {
+extension SimpleAlertType {
     var alertView: Alert {
         /// The case both buttons are given
-        if let primaryButton = self.alertButtons.first,
-                  let secondaryButton = self.alertButtons.second {
+        if let primaryButton = self.primaryButton,
+                  let secondaryButton = self.secondaryButton {
             /// The case both buttons are given
             return Alert(
                 title: Text(self.title),
@@ -19,7 +19,7 @@ extension AlertType {
                 primaryButton: primaryButton.toSystemAlertButton,
                 secondaryButton: secondaryButton.toSystemAlertButton
             )
-        } else if let primaryButton = self.alertButtons.first {
+        } else if let primaryButton = self.primaryButton {
             /// The case only `primaryButton` is given
             return Alert(
                 title: Text(self.title),
@@ -38,7 +38,7 @@ extension AlertType {
 
 
 @available(iOS 15.0, *)
-extension AlertType {
+extension SheetAlertType {
     @ViewBuilder func alertContent(dismissAction: @escaping () -> Void) -> some View {
         /// The case both buttons are given
         if self.alertButtons.isEmpty {
