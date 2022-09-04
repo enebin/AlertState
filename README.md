@@ -15,7 +15,7 @@ Manage `Alert`s in one place!
 
 
 ## Usage
-```
+``` Swift
 import SwiftUI
 import AlertState
 
@@ -44,8 +44,6 @@ extension AlertTypes: AlertType {
         return "Test"
     }
 }
-
-
 ```
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
