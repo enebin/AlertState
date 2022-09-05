@@ -36,12 +36,12 @@ extension View {
     ///     A binding that holds the current value of any `AlertType`.
     ///     For more information about the possible positions see `BottomSheetPosition`.
     @available(iOS, deprecated: 15.0)
-    public func showAlert<T>(with alertState: Binding<T?>) -> some View where T: SimpleAlertType {
+    public func showAlert<T>(with alertState: Binding<T?>) -> some View where T: SimpleAlertType & Identifiable {
         return ShowAlertView(content: self, alertType: alertState)
     }
     
     @available(iOS 15.0, *)
-    public func showAlert<T>(with alertState: Binding<T?>) -> some View where T: SheetAlertType {
+    public func showAlert<T>(with alertState: Binding<T?>) -> some View where T: NewAlertType & Equatable {
         return ShowNewAlertView(content: self, alertType: alertState)
     }
 }

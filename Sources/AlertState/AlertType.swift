@@ -20,7 +20,7 @@ public protocol AlertType {
 
 /// It adopts `Identifiable` for iOS 13's nil - non nil changing
 /// Under iOS 15, `Alert` shows only 2 buttons at most, even you pass more than 2 buttons.
-public protocol SimpleAlertType: AlertType, Identifiable {
+public protocol SimpleAlertType: AlertType {
     var primaryButton: AlertButton? { get }
     
     var secondaryButton: AlertButton? { get }
@@ -29,7 +29,7 @@ public protocol SimpleAlertType: AlertType, Identifiable {
 
 /// `Equatable` for iOS 15 for `onChange`
 @available(iOS 15.0, *)
-public protocol SheetAlertType: AlertType, Equatable{
+public protocol NewAlertType: AlertType {
     /// `AlertButton`
     ///
     /// Add buttons as many as you want.

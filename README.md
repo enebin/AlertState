@@ -7,7 +7,7 @@ Manage `Alert`s in one place!
 
 ## Features
 - Super easy to use
-- You only need 2 lines to show alert in `View`s.  No needs for extra variables anymore!
+    - You only need 2 lines to show alert in `View`s.  No needs to write extra variables!
 - Abstract your alert windows with `enum`. It helps you managing the alert windows with more organized way.
 
 ## How to install
