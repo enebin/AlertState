@@ -7,33 +7,31 @@
 
 import SwiftUI
 
-/// This protocol only has text attributes for alert window.
-///
-/// You can adopt it unless you want to any display the buttons
-/// but it recommended to use other inherited protocols to safe use of the package.
-public protocol AlertType {
+/// Base protocol only has title attribute for alert window.
+public protocol BasicAlertType {
     var title: String { get }
-    
-    var message: String? { get }
 }
 
-
-/// It adopts `Identifiable` for iOS 13's nil - non nil changing
-/// Under iOS 15, `Alert` shows only 2 buttons at most, even you pass more than 2 buttons.
+/// A protocol for the old alert which has at most 2 buttons.
+///
+/// If you don't pass any buttons, it will show default OK button.
 @available(iOS, deprecated: 15.0)
-public protocol SimpleAlertType: AlertType {
+public protocol SimpleAlertType: BasicAlertType {
+    var message: String? { get }
+    
     var primaryButton: AlertButton? { get }
     
     var secondaryButton: AlertButton? { get }
 }
 
-
-/// `Equatable` for iOS 15 for `onChange`
+/// A protocol for the new alert introduced in iOS 15.
+///
+/// It can have more than 2 buttons.
+/// Just pass the array of `AlertButton` to add buttons to your alert window.
+/// If you don't pass any buttons, it will show default OK button.
 @available(iOS 15.0, *)
-public protocol NewAlertType: AlertType {
-    /// `AlertButton`
-    ///
-    /// Add buttons as many as you want.
-    /// Pass an empty array to show default `OK` button.
+public protocol NewAlertType: BasicAlertType {
+    var message: String? { get }
+    
     var alertButtons: [AlertButton] { get }
 }

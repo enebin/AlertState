@@ -1,9 +1,8 @@
 import SwiftUI
 
+/// A property wrapper offers preprocessed state which can be used for `.showAlert`
 @available(iOS 13, *)
-@propertyWrapper
-public struct AlertState<T>: DynamicProperty where T: AlertType {
-    /// Type of alert
+@propertyWrapper public struct AlertState<T>: DynamicProperty where T: BasicAlertType {
     @State private var alertType: T? = .none
     
     public var wrappedValue: T? {

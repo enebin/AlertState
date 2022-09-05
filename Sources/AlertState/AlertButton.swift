@@ -9,8 +9,7 @@ import SwiftUI
 
 /// Generic button struct used for `SwiftUI`'s `Alert`
 ///
-/// It's designed to cover `Alert.Button` under iOS 15.
-/// Above iOS 15, it's impossible to use `Alert.Button` so returns SwiftUI's `Button` instead.`
+/// It's designed to cover `Alert.Button` and`Button` both in general way.
 /// You can use  `toSystemButton`  and  `toSwiftUIButton` to return button for each purpose.
 /// They're located in AlertButton + Extension.swift
 public struct AlertButton {
