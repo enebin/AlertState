@@ -2,7 +2,7 @@
 //  AlertButton + Extension.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/31.
+//  Created by YoungBin Lee on 2022/08/31.
 //
 
 import SwiftUI
@@ -25,23 +25,23 @@ extension AlertButton {
     
     @available(iOS 15.0, *)
     var toSwiftUIButton: Button<Text> {
-        let button: Button<Text>
+        let swiftUIButton: Button<Text>
         
         switch self.role {
         case .`default`:
-            button = Button(action: self.action) {
+            swiftUIButton = Button(action: self.action) {
                 Text(self.label)
             }
         case .cancel:
-            button = Button(role: .cancel, action: self.action) {
+            swiftUIButton = Button(role: .cancel, action: self.action) {
                 Text(self.label)
             }
         case .detructive:
-            button = Button(role: .destructive, action: self.action) {
+            swiftUIButton = Button(role: .destructive, action: self.action) {
                 Text(self.label)
             }
         }
         
-        return button
+        return swiftUIButton
     }
 }

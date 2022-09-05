@@ -2,7 +2,7 @@
 //  Array + Extension.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/31.
+//  Created by YoungBin Lee on 2022/08/31.
 //
 
 extension Array where Element: Any {

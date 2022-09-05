@@ -2,17 +2,17 @@
 //  AlertType + Extension.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/29.
+//  Created by YoungBin Lee on 2022/08/29.
 //
 
 import SwiftUI
 
 extension SimpleAlertType {
     var alertView: Alert {
-        /// The case both buttons are given
+        // The case both buttons are given
         if let primaryButton = self.primaryButton,
-                  let secondaryButton = self.secondaryButton {
-            /// The case both buttons are given
+           let secondaryButton = self.secondaryButton {
+            // The case both buttons are given
             return Alert(
                 title: Text(self.title),
                 message: self.message == nil ? nil : Text(self.message!),
@@ -20,14 +20,14 @@ extension SimpleAlertType {
                 secondaryButton: secondaryButton.toSystemAlertButton
             )
         } else if let primaryButton = self.primaryButton {
-            /// The case only `primaryButton` is given
+            // The case only `primaryButton` is given
             return Alert(
                 title: Text(self.title),
                 message: self.message == nil ? nil : Text(self.message!),
                 dismissButton: primaryButton.toSystemAlertButton
             )
         } else {
-            /// Neither of the buttons is given
+            // Neither of the buttons is given
             return Alert(
                 title: Text(self.title),
                 message: self.message == nil ? nil : Text(self.message!)
@@ -40,9 +40,9 @@ extension SimpleAlertType {
 @available(iOS 15.0, *)
 extension NewAlertType {
     @ViewBuilder func alertContent(dismissAction: @escaping () -> Void) -> some View {
-        /// The case both buttons are given
+        // The case both buttons are given
         if self.alertButtons.isEmpty {
-            /// Neither of the buttons is given
+            // Neither of the buttons is given
             EmptyView()
         } else {
             Group {

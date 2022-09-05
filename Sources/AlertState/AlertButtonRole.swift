@@ -2,14 +2,14 @@
 //  AlertButtonRole.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/31.
+//  Created by YoungBin Lee on 2022/08/31.
 //
 
 import SwiftUI
 
-/// Alert button's roles for internal use
+/// Button's roles corresponding to system's button roles.
 ///
-/// It can be converted to `SwiftUI`'s native struct `ButtonRole`
+/// It can be converted to `SwiftUI`'s native struct `ButtonRole`or type `Alert.Button`.
 public enum AlertButtonRole: Equatable {
     case `default`
     case detructive

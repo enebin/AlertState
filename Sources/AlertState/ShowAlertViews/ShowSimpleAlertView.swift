@@ -2,12 +2,13 @@
 //  ShowAlert.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/29.
+//  Created by YoungBin Lee on 2022/08/29.
 //
 
 import SwiftUI
 
-struct ShowAlertView<V, AlertT>: View where V: View, AlertT: SimpleAlertType & Identifiable {
+@available(iOS, deprecated: 15.0)
+struct ShowSimpleAlertView<V, AlertT>: View where V: View, AlertT: SimpleAlertType & Identifiable {
     private let content: V
     /// Get alert type
     @Binding private var alertType: AlertT?

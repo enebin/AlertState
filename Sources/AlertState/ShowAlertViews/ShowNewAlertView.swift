@@ -2,7 +2,7 @@
 //  ShowNewAlertView.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/30.
+//  Created by YoungBin Lee on 2022/08/30.
 //
 
 import SwiftUI

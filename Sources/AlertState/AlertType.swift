@@ -2,7 +2,7 @@
 //  AlertType.swift
 //  AlertState
 //
-//  Created by 이영빈 on 2022/08/29.
+//  Created by YoungBin Lee on 2022/08/29.
 //
 
 import SwiftUI
@@ -20,6 +20,7 @@ public protocol AlertType {
 
 /// It adopts `Identifiable` for iOS 13's nil - non nil changing
 /// Under iOS 15, `Alert` shows only 2 buttons at most, even you pass more than 2 buttons.
+@available(iOS, deprecated: 15.0)
 public protocol SimpleAlertType: AlertType {
     var primaryButton: AlertButton? { get }
     
