@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "alertstate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/enebin/AlertState",
+      "state" : {
+        "branch" : "main",
+        "revision" : "16680499ab93be6776fd76a198c00eada81af0db"
+      }
+    }
+  ],
+  "version" : 2
+}
