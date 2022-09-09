@@ -2,15 +2,21 @@
 Manage `Alert`s in one place! 
 
 ## Overview
+| Normal alert | Multi button alert |
+|----------|----------|
+| <img width="200" src="https://media.giphy.com/media/73Ma7S4SLQAHcmTYbE/giphy.gif"> | <img width="200" src="https://media.giphy.com/media/8Qpra2RUXNdGqqySjY/giphy.gif">|
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
-
+     
 ## Features
 ### Super easy to use
 - You only need 2 lines to show alert in `View`s.  No needs to write extra variables like `isPresented`!
 
 ### Manage everything in one place
 - It helps you managing the alert windows with more organized way.
+
+### 100% compatible with native features
+- You can use button role(`cancel`, `default`, `destructive`) in the same way you did in SwiftUI
+- It's compatible with any version of iOS.
 
 ## Requirements
 - iOS 13
@@ -64,3 +70,6 @@ struct ContentView: View {
     }
 }
 ```
+
+## Example
+For more informations, check [the example projects](https://github.com/enebin/AlertState/tree/main/Examples).
